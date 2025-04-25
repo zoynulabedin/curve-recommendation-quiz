@@ -1,0 +1,122 @@
+/* Base styles */
+.hidden {
+  display: none !important;
+}
+
+/* Custom styles for the quiz */
+.radio-option {
+  background-color: white;
+  transition: all 0.3s ease;
+}
+
+.radio-option:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#step2 .radio-option,
+#step3 .radio-option,
+#step4 .radio-option {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+#step2 .radio-option:hover,
+#step3 .radio-option:hover,
+#step4 .radio-option:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Custom radio button styling */
+input[type="radio"] {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #3b82f6;
+  border-radius: 50%;
+  outline: none;
+  position: relative;
+}
+
+input[type="radio"]:checked {
+  background-color: #3b82f6;
+}
+
+input[type="radio"]:checked::after {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background-color: white;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Section transitions */
+section {
+  transition: opacity 0.3s ease-in-out;
+}
+
+section.hidden {
+  opacity: 0;
+  display: none !important;
+}
+
+/* Make sections full height and centered */
+section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Result section styling */
+#result {
+  background-size: 200% 200%;
+  animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Button hover effects */
+button {
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive padding */
+@media (max-width: 640px) {
+  .radio-option {
+    padding: 1rem;
+  }
+}
+
+/* Responsive grid adjustments */
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .radio-option {
+    margin-bottom: 1rem;
+  }
+}
