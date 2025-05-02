@@ -35,14 +35,14 @@ input[type="radio"] {
   appearance: none;
   width: 20px;
   height: 20px;
-  border: 2px solid #3b82f6;
+  border: 2px solid #facc14;
   border-radius: 50%;
   outline: none;
   position: relative;
 }
 
 input[type="radio"]:checked {
-  background-color: #3b82f6;
+  background-color: #ACC14;
 }
 
 input[type="radio"]:checked::after {
